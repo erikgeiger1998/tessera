@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESSERA VAULT Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0d1117; color: #e6edf3; line-height: 1.6; }
+        .content-container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+        h1 { color: #00ff00; text-shadow: 0 0 5px #00ff00; }
+        .matrix-text { color: #00ff00; }
+        .card-bg { background-color: #161b22; border: 1px solid #30363d; }
+    </style>
+</head>
+<body>
+
+    <div class="content-container">
+        <h1 class="text-4xl font-bold mb-6 text-center">TESSERA VAULT Privacy Policy</h1>
+        <p class="text-sm text-center text-gray-500 mb-8">Effective Date: December 3, 2025</p>
+
+        <section class="mb-8 card-bg p-6 rounded-xl">
+            <h2 class="text-2xl font-semibold mb-4 matrix-text">1. Our Core Privacy Commitment: Zero Knowledge</h2>
+            <p class="mb-4">TESSERA VAULT is designed on a **Zero-Knowledge** architecture. This means we, the developers, cannot access or decrypt your personal passwords, security notes, or any other content stored within the app. All sensitive data remains encrypted exclusively on your devices.</p>
+            <p>We do not collect personal data for marketing purposes, nor do we sell your data to any third parties.</p>
+        </section>
+
+        <section class="mb-8 card-bg p-6 rounded-xl">
+            <h2 class="text-2xl font-semibold mb-4 matrix-text">2. Data Storage and Encryption (End-to-End)</h2>
+            
+            <h3 class="text-xl font-semibold mt-4 mb-2 text-blue-400">2.1 Local Storage and Encryption</h3>
+            <ul class="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                <li>**Data:** All your passwords and confidential entries are stored locally on your device in an encrypted format.</li>
+                <li>**Encryption Standard:** We use the **AES-256 GCM (Galois/Counter Mode)** algorithm, which is the industry standard for strong data encryption.</li>
+                <li>**Encryption Key:** The symmetric key required for AES-256 decryption is stored and protected by the **Apple iCloud Keychain** (Secure Enclave). This ensures the key never leaves the Apple secure environment and is never transmitted to us.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-4 mb-2 text-blue-400">2.2 Cloud Synchronization (CloudKit)</h3>
+            <p class="mt-2 text-gray-300">If you enable iCloud Synchronization:</p>
+            <ul class="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                <li>**Service:** Data synchronization is performed using Apple's **CloudKit Private Database** (or NSUbiquitousKeyValueStore for smaller data sets).</li>
+                <li>**Data Stored:** Only the **AES-256 Encrypted Ciphertext** of your passwords is uploaded to CloudKit.</li>
+                <li>**Our Access:** We have **Zero Access** to the content of your CloudKit database, as the data remains encrypted with your unique Keychain key throughout the synchronization process.</li>
+            </ul>
+        </section>
+
+        <section class="mb-8 card-bg p-6 rounded-xl">
+            <h2 class="text-2xl font-semibold mb-4 matrix-text">3. Third-Party Services (OneSignal)</h2>
+            
+            <p class="mb-4">To provide you with instant security alerts (e.g., weak password warnings, intrusion attempts), TESSERA VAULT utilizes the third-party service **OneSignal** for push notifications.</p>
+            
+            <h3 class="text-xl font-semibold mt-4 mb-2 text-blue-400">Data Shared with OneSignal:</h3>
+            <ul class="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                <li>**Push Token:** Your device's unique identifier (APNs token) required to send notifications.</li>
+                <li>**Device Metadata:** Device model, OS version, app version, and language preference.</li>
+                <li>**Non-Sensitive Tags:** We send specific, non-personal **Tags** (e.g., `password_strength: weak`, `intrusion_alert: true`, `weak_password_item_id: [UUID]`). **These tags do not contain any actual passwords or identifying account data.** They are used solely to trigger the necessary security alerts and deep linking to the correct item in your vault.</li>
+            </ul>
+            <p class="mt-4">Please refer to the OneSignal Privacy Policy for details on how they handle this data.</p>
+        </section>
+
+        <section class="mb-8 card-bg p-6 rounded-xl">
+            <h2 class="text-2xl font-semibold mb-4 matrix-text">4. Information Automatically Collected</h2>
+            <p class="text-gray-300">We do not use analytics tools like Google Analytics or Firebase Analytics. The only data collected automatically pertains to app functionality:</p>
+            <ul class="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                <li>**In-App Usage (Aggregated/Anonymous):** Basic usage data collected by Apple (e.g., app launches, crashes). This is anonymous.</li>
+                <li>**Failed Attempts:** We locally track failed authentication attempts on your device for the Intruder Alert feature. This data is reset upon successful login and is **never shared or uploaded**.</li>
+                <li>**App Settings:** Language preference and Dark Mode setting.</li>
+            </ul>
+        </section>
+
+        <section class="mb-8 card-bg p-6 rounded-xl">
+            <h2 class="text-2xl font-semibold mb-4 matrix-text">5. Contact Information</h2>
+            <p class="text-gray-300">If you have any questions about this Privacy Policy or your data, please contact us at:</p>
+            <p class="mt-2 font-semibold">Email: erik.geiger1998@gmail.com</p>
+        </section>
+
+        <div class="mt-12 text-center text-sm text-gray-500">
+            <a href="/index_en.html" class="hover:text-blue-400">← Back to Main Page</a>
+        </div>
+    </div>
+
+</body>
+</html>
